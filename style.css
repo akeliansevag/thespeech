@@ -1,0 +1,69 @@
+/*!
+Theme Name: thespeech
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: thespeech
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+thespeech is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin-top: 92px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.separator {
+  height: 20px;
+  width: 1px;
+  background-color: #dedede;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 20px;
+  background-color: black;
+}
+
+.menu {
+  @apply text-white w-full flex justify-between;
+}
+.menu > li {
+  @apply w-full relative text-center;
+}
+
+.menu > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 30px;
+  background-color: #8c8c8c;
+  display: block;
+}
