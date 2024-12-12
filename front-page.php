@@ -8,7 +8,7 @@
             </h1>
             <h2 class="text-[20px] uppercase">
                 Lorem ipsum dolor sit amet adipiscing
-                elitNulla ornare vestibulum
+                elitNulla ornare vestibulums
             </h2>
         </div>
     </div>
