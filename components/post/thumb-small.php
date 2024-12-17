@@ -8,7 +8,7 @@ $post = $args['post'];
         <?php if (has_post_thumbnail($post->ID)): ?>
             <?= get_the_post_thumbnail($post->ID, 'large-thumbnail', ['class' => $thumb_classes]); ?>
         <?php else: ?>
-            <img src="<?= get_template_directory_uri() ?>/assets/img/placeholder.webp" alt="Image Placeholder" class="<?= $thumb_classes ?>">
+            <img src="<?= get_template_directory_uri() ?>/src/img/placeholder.webp" alt="Image Placeholder" class="<?= $thumb_classes ?>">
         <?php endif; ?>
 
         <div class="absolute flex gap-2 flex-col bottom-5 left-5 z-10 text-white">

@@ -55,14 +55,15 @@ function thespeech_scripts()
 	$js_version = file_exists($js_file) ? filemtime($js_file) : _S_VERSION;
 
 	// Enqueue styles and scripts with dynamic versions
-	wp_enqueue_style('thespeech-style', get_template_directory_uri() . "/build/output.css", array(), $css_version);
-	wp_enqueue_script('thespeech-navigation', get_template_directory_uri() . '/assets/js/scripts.js', array(), $js_version, true);
+	wp_enqueue_style('thespeech-style', get_template_directory_uri() . "/dist/css/output.css", array(), $css_version);
+	wp_enqueue_script_module('thespeech-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array(), $js_version, true);
+
+
 
 	//wp_style_add_data('thespeech-style', 'rtl', 'replace');
 
 }
 add_action('wp_enqueue_scripts', 'thespeech_scripts');
-
 
 function dd($variable)
 {
