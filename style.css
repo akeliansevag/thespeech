@@ -67,3 +67,33 @@ body {
   background-color: #8c8c8c;
   display: block;
 }
+
+.section-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.overlay {
+  position: relative;
+}
+.overlay::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 16, 17, 0) 29.21%,
+    #011011 110.14%
+  );
+}
+
+.thumb img {
+  transition: transform 0.4s ease-out;
+}
+.thumb:hover img {
+  transform: scale(1.05);
+}

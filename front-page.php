@@ -14,6 +14,8 @@
     </div>
 </section>
 <section class="py-10 bg-white">
-
+    <div class="container">
+        <?php get_template_part("components/homepage/twocolumns", null, ['category_name' => 'protalk']); ?>
+    </div>
 </section>
 <?php get_footer(); ?>

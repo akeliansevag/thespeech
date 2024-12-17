@@ -12,6 +12,8 @@ function thespeech_setup()
 
 	add_theme_support('post-thumbnails');
 
+	add_theme_support('post-formats', array('video'));
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
@@ -19,6 +21,13 @@ function thespeech_setup()
 		)
 	);
 
+	add_image_size('banner-image', 1920);
+
+	add_image_size('big-thumb', 1920, 1080, true);
+
+	add_image_size('medium-thumb', 700, 394, true);
+
+	add_image_size('small-thumb', 400, 225, true);
 
 	add_theme_support(
 		'html5',
@@ -53,3 +62,11 @@ function thespeech_scripts()
 
 }
 add_action('wp_enqueue_scripts', 'thespeech_scripts');
+
+
+function dd($variable)
+{
+	echo '<pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: Courier, monospace; color: #333; font-size: 14px;">';
+	var_dump($variable);
+	echo '</pre>';
+}
