@@ -37,7 +37,7 @@
                             <div></div>
                             <div class="flex flex-col justify-center items-center gap-4 text-center relative z-10">
                                 <?php get_template_part("components/assets/play-button"); ?>
-                                <h3 class="uppercase mt-4">Mountasser Hachem</h3>
+                                <h3 class="uppercase mt-4 text-xl font-[700]">Mountasser Hachem</h3>
                                 <h4>Founder of Monty Mobile</h4>
                             </div>
                             <div class="flex justify-between items-center gap-6 relative z-10">
