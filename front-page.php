@@ -28,6 +28,35 @@
 <section class="bg-black py-12 text-white">
     <div class="container">
         <h2 class="section-title text-center">THE TEAM</h2>
+        <div class="team swiper mt-8">
+            <div class="swiper-wrapper">
+                <?php for ($i = 0; $i < 8; $i++): ?>
+                    <div class="swiper-slide">
+                        <img class="absolute w-full h-full object-cover -z-10" src="<?= get_template_directory_uri() ?>/src/img/mountasser-hachem.webp" alt="">
+                        <div class="flex flex-col justify-between relative w-full aspect-square overlay p-10">
+                            <div></div>
+                            <div class="flex flex-col justify-center items-center gap-4 text-center relative z-10">
+                                <?php get_template_part("components/assets/play-button"); ?>
+                                <h3 class="uppercase mt-4">Mountasser Hachem</h3>
+                                <h4>Founder of Monty Mobile</h4>
+                            </div>
+                            <div class="flex justify-between items-center gap-6 relative z-10">
+                                <a href="" class="s-button">
+                                    Learn More
+                                </a>
+                                <a href="" class="s-button">
+                                    Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endfor; ?>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev after:text-white"></div>
+            <div class="swiper-button-next after:text-white"></div>
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>
