@@ -1390,6 +1390,34 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/js/menu.js":
+/*!************************!*\
+  !*** ./src/js/menu.js ***!
+  \************************/
+/***/ (() => {
+
+const sideMenu = document.getElementById("side-menu");
+const sideMenuOverlay = document.getElementById("side-menu-overlay");
+const body = document.getElementsByTagName("body")[0];
+
+document.getElementById("hamburger").addEventListener("click",()=>{    
+    body.classList.add("open");
+});
+
+document.getElementById("close-side-menu").addEventListener("click",()=>{
+    closeMenu();
+});
+
+sideMenuOverlay.addEventListener("click",()=>{
+    closeMenu();
+})
+
+const closeMenu = () => {
+    body.classList.remove("open");
+};
+
+/***/ }),
+
 /***/ "./src/js/swiper.js":
 /*!**************************!*\
   !*** ./src/js/swiper.js ***!
@@ -12007,9 +12035,12 @@ var __webpack_exports__ = {};
   !*** ./src/js/index.js ***!
   \*************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calendar */ "./src/js/calendar.js");
-/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_calendar__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./swiper */ "./src/js/swiper.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_menu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./calendar */ "./src/js/calendar.js");
+/* harmony import */ var _calendar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_calendar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./swiper */ "./src/js/swiper.js");
+
 
 
 

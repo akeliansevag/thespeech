@@ -12,6 +12,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php get_template_part('components/SideMenu'); ?>
 	<header class="fixed top-0 z-20 w-full">
 		<div class="bg-white h-[92px] flex items-center">
 			<div class="container">
@@ -83,7 +84,7 @@
 
 							<span class="separator"> </span>
 
-							<div class="hamburger">
+							<div class="hamburger cursor-pointer" id="hamburger">
 								<span></span>
 								<span></span>
 								<span></span>
