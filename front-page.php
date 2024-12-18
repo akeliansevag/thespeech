@@ -59,4 +59,7 @@
         </div>
     </div>
 </section>
+
+<?php get_template_part('components/CalendarSection', null, ['category_name' => 'open-mic']); ?>
+
 <?php get_footer(); ?>

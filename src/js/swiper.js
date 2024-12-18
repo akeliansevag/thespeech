@@ -8,6 +8,7 @@ const team  = new Swiper('.team', {
   slidesPerView: 1,
   centeredSlides: false,
   spaceBetween: 20,
+  grabCursor: true,
   breakpoints: {
     1280: {
         slidesPerView:2.5,

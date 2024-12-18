@@ -127,3 +127,107 @@ body {
     rgba(0, 0, 0, 1) 100%
   );
 }
+
+.calendar-container {
+  background-color: transparent;
+  border: 1px solid #707778;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  min-height: 450px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  background: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.month-year {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-body.months-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.calendar-body.years-grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  color: white;
+  width: 40px;
+  margin: 0 auto;
+}
+
+.day:hover {
+  background-color: #707778;
+  color: #1f0000;
+}
+
+.year,
+.month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.year:hover,
+.month:hover {
+  background-color: #444;
+}
+
+/* Highlight the current day in red */
+.current-day {
+  background-color: red;
+  color: white;
+}
+
+button.calendar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.calendar:hover {
+  background-color: #444;
+}
