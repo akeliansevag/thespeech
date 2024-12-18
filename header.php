@@ -97,12 +97,11 @@
 			</div>
 		</div>
 
-		<div class="bg-[#BBBFBF] bg-opacity-40 h-[50px] flex items-center w-full backdrop-blur-[50px]">
-			<div class="container">
+		<div class="bg-[#BBBFBF] max-lg:hidden bg-opacity-40 h-[50px] w-full flex items-center backdrop-blur-[50px]">
+			<div class="w-full max-w-[1400px] mx-auto">
 				<?php
-				wp_nav_menu(['menu' => 'main-menu', 'menu_class' => 'uppercase menu']);
+				wp_nav_menu(['menu' => 'main-menu', 'menu_class' => 'uppercase menu text-sm font-[600]']);
 				?>
-
 			</div>
 		</div>
 	</header>
