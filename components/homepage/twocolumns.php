@@ -13,7 +13,7 @@ $posts = get_posts($args);
 ?>
 <?php if ($posts): ?>
     <div>
-        <h2 class="section-title"><?= $category->name ?></h2>
+        <h2 class="section-title uppercase"><?= $category->name ?></h2>
         <div class="grid grid-cols-4 gap-3 mt-4">
             <div class="col-span-3">
                 <?php get_template_part("components/post/thumb-large", null, ['post' => $posts[0]]); ?>

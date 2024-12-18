@@ -34,7 +34,17 @@
 					</div>
 					<div class="w-1/3">
 						<form action="" method="get">
-							<input name="search" type="text" class="bg-[#f2f2f2] bg-opacity-60 w-full px-6 py-2" placeholder="Search">
+							<div class="relative">
+								<input name="search" type="text" class="bg-[#f2f2f2] bg-opacity-60 w-full pl-6 pr-10 py-2" placeholder="Search">
+								<div class="absolute top-1/2 -translate-y-1/2 right-5">
+									<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.49577 13.9998C8.97492 13.9995 10.4114 13.5044 11.5766 12.5932L15.2399 16.2565L16.4183 15.0782L12.7549 11.4148C13.6666 10.2496 14.1621 8.8127 14.1624 7.33317C14.1624 3.65734 11.1716 0.666504 7.49577 0.666504C3.81994 0.666504 0.829102 3.65734 0.829102 7.33317C0.829102 11.009 3.81994 13.9998 7.49577 13.9998ZM7.49577 2.33317C10.2533 2.33317 12.4958 4.57567 12.4958 7.33317C12.4958 10.0907 10.2533 12.3332 7.49577 12.3332C4.73827 12.3332 2.49577 10.0907 2.49577 7.33317C2.49577 4.57567 4.73827 2.33317 7.49577 2.33317Z" fill="#BBBFBF" />
+									</svg>
+								</div>
+
+
+							</div>
+
 						</form>
 					</div>
 					<div class="w-1/3 flex justify-end">
@@ -88,26 +98,10 @@
 
 		<div class="bg-[#BBBFBF] bg-opacity-40 h-[50px] flex items-center w-full backdrop-blur-[50px]">
 			<div class="container">
-				<ul class=" menu">
-					<li>
-						<a href="">The team</a>
-					</li>
-					<li>
-						<a href="">WARning</a>
-					</li>
-					<li>
-						<a href="">Protalk</a>
-					</li>
-					<li>
-						<a href="">Stories</a>
-					</li>
-					<li>
-						<a href="">Follow your rights</a>
-					</li>
-					<li>
-						<a href="">Open mic</a>
-					</li>
-				</ul>
+				<?php
+				wp_nav_menu(['menu' => 'main-menu', 'menu_class' => 'uppercase menu']);
+				?>
+
 			</div>
 		</div>
 	</header>

@@ -13,6 +13,7 @@
         </div>
     </div>
 </section>
+<?php get_template_part('components/FullPostsSlider', null, ['category_name' => 'stories']); ?>
 <section class="pt-12 bg-white">
     <div class="container">
         <?php get_template_part("components/homepage/twocolumns", null, ['category_name' => 'protalk']); ?>
@@ -28,7 +29,7 @@
 <section class="bg-black py-12 text-white">
     <div class="container">
         <h2 class="section-title text-center">THE TEAM</h2>
-        <div class="team swiper mt-8">
+        <div id="team-slider" class="team swiper mt-8">
             <div class="swiper-wrapper">
                 <?php for ($i = 0; $i < 8; $i++): ?>
                     <div class="swiper-slide">

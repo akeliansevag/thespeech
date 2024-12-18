@@ -82,23 +82,23 @@ body {
   color: white;
   text-transform: uppercase;
 }
-.swiper-slide {
+#team-slider .swiper-slide {
   transition: transform 0.2s ease-out;
 }
-.swiper-slide-prev,
-.swiper-slide-next {
+#team-slider .swiper-slide-prev,
+#team-slider .swiper-slide-next {
   transform: scale(0.8) !important;
 }
 
-.swiper-slide-next {
+#team-slider .swiper-slide-next {
   transform-origin: top left;
 }
 
-.swiper-slide-prev {
+#team-slider .swiper-slide-prev {
   transform-origin: top right;
 }
-.swiper::after,
-.swiper::before {
+#team-slider.swiper::after,
+#team-slider.swiper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -108,7 +108,7 @@ body {
   z-index: 2;
 }
 
-.swiper::before {
+#team-slider.swiper::before {
   content: "";
   left: 0;
   background: linear-gradient(
@@ -118,7 +118,7 @@ body {
   );
 }
 
-.swiper::after {
+#team-slider.swiper::after {
   content: "";
   right: 0;
   background: linear-gradient(
@@ -230,4 +230,13 @@ button.calendar {
 
 button.calendar:hover {
   background-color: #444;
+}
+
+.one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }

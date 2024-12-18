@@ -14,7 +14,7 @@ $posts = get_posts($args);
 <?php if ($posts): ?>
     <section class="bg-[#021112] py-12 text-white">
         <div class="container">
-            <h2 class="section-title"><?= $category->name ?></h2>
+            <h2 class="section-title uppercase"><?= $category->name ?></h2>
             <div class="mt-10 grid grid-cols-3 gap-7">
                 <div class="flex flex-col gap-5">
                     <?php foreach ($posts as $post): ?>
