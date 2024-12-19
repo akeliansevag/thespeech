@@ -55,7 +55,10 @@
 							</div>
 
 							<span class="separator max-lg:hidden"></span>
-							<?php get_template_part('components/SocialMedia'); ?>
+							<div class="max-lg:hidden">
+								<?php get_template_part('components/SocialMedia'); ?>
+							</div>
+
 
 							<span class="separator"> </span>
 
