@@ -1399,7 +1399,7 @@ module.exports = styleTagTransform;
 const sideMenu = document.getElementById("side-menu");
 const sideMenuOverlay = document.getElementById("side-menu-overlay");
 const body = document.getElementsByTagName("body")[0];
-
+body.classList.add("open");
 document.getElementById("hamburger").addEventListener("click",()=>{    
     body.classList.add("open");
 });
