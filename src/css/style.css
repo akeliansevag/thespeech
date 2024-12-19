@@ -129,12 +129,12 @@ body {
 }
 
 .calendar-container {
+  @apply max-xl:min-h-[400px] xl:min-h-[450px];
   background-color: transparent;
   border: 1px solid #707778;
   padding: 30px;
   text-align: center;
   position: relative;
-  min-height: 450px;
 }
 
 .calendar-header {
@@ -181,6 +181,7 @@ body {
 }
 
 .day {
+  @apply max-xl:w-[30px] xl:w-[40px];
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +189,6 @@ body {
   aspect-ratio: 1/1;
   cursor: pointer;
   color: white;
-  width: 40px;
   margin: 0 auto;
 }
 

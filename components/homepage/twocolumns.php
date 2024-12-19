@@ -14,12 +14,12 @@ $posts = get_posts($args);
 <?php if ($posts): ?>
     <div>
         <h2 class="section-title uppercase"><?= $category->name ?></h2>
-        <div class="grid grid-cols-4 gap-3 mt-4">
-            <div class="col-span-3">
+        <div class="grid grid-cols-4 max-lg:grid-cols-1 gap-3 mt-4">
+            <div class="col-span-2 xl:col-span-3">
                 <?php get_template_part("components/post/thumb-large", null, ['post' => $posts[0]]); ?>
             </div>
 
-            <div class="flex flex-col gap-3">
+            <div class="col-span-2 xl:col-span-1 flex flex-col gap-3">
                 <?php foreach ($posts as $key => $post): ?>
                     <?php if ($key == 0) continue; ?>
                     <div>

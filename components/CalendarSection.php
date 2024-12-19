@@ -15,7 +15,7 @@ $posts = get_posts($args);
     <section class="bg-[#021112] py-12 text-white">
         <div class="container">
             <h2 class="section-title uppercase"><?= $category->name ?></h2>
-            <div class="mt-10 grid grid-cols-3 gap-7">
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-7">
                 <div class="flex flex-col gap-5">
                     <?php foreach ($posts as $post): ?>
                         <div>
@@ -27,7 +27,7 @@ $posts = get_posts($args);
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div>
+                <div class="lg:col-span-1">
                     <div class="calendar-container flex flex-col justify-between" id="calendar">
                         <div>
 

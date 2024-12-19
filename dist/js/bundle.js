@@ -1447,7 +1447,11 @@ if(document.getElementById('team-slider')){
       },
       992: {
           slidesPerView:2,
-          centeredSlides:false
+          centeredSlides:true
+      },
+      768: {
+        slidesPerView:1.5,
+        centeredSlides:true
       }
     },
     // Navigation arrows
@@ -1466,8 +1470,12 @@ if(document.getElementById('full-posts-slider')){
     spaceBetween: 20,
     autoplay: true,
     breakpoints: {
+      1500: {
+        slidesPerView:5.5,
+        centeredSlides:true
+      },
       1280: {
-          slidesPerView:5.5,
+          slidesPerView:4.5,
           centeredSlides:true
       },
       992: {

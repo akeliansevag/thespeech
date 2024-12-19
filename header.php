@@ -33,7 +33,7 @@
 							</svg>
 						</a>
 					</div>
-					<div class="w-1/3">
+					<div class="w-1/3 max-lg:hidden">
 						<form action="" method="get">
 							<div class="relative">
 								<input name="search" type="text" class="bg-[#f2f2f2] bg-opacity-60 w-full pl-6 pr-10 py-2" placeholder="Search">
@@ -54,8 +54,8 @@
 								<a class="font-bold" href="">EN</a> <span> / </span> <a href="">AR</a>
 							</div>
 
-							<span class="separator"></span>
-							<div class="flex items-center gap-2">
+							<span class="separator max-lg:hidden"></span>
+							<div class="flex items-center gap-2 max-lg:hidden">
 								<a href="">
 									<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M9.34201 3.19026C9.34201 3.19026 7.85837 3.07335 7.27389 3.28915C6.30783 3.64599 6.28483 4.48053 6.28483 5.27633V6.90158H9.23859L8.80698 10.0105H6.28483V17.6849H2.9487V10.0105H0.174953V6.90158H2.94887V4.26484C2.94887 1.47291 5.09793 0.461369 6.3792 0.339988C7.66047 0.218607 9.34201 0.58275 9.34201 0.58275V3.19026Z" fill="black" />
