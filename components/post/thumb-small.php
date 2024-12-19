@@ -18,7 +18,7 @@ $post = $args['post'];
                 </svg>
                 <h5 class="font-[14px]">PLAY VIDEO</h5>
             </a>
-            <h4 class="uppercase font-bold"><a href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a></h4>
+            <h4 class="max-lg:line-clamp-1 uppercase font-bold"><a href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a></h4>
             <h5 class="text-sm">By <a href="<?= get_author_posts_url($post->post_author) ?>"><?= get_the_author_meta('display_name', $post->post_author); ?></a> - <?= get_the_date('F j, Y', $post->ID) ?> </h5>
         </div>
     </div>

@@ -99,6 +99,7 @@ body {
 }
 #team-slider.swiper::after,
 #team-slider.swiper::before {
+  @apply max-lg:hidden;
   content: "";
   position: absolute;
   top: 0;
@@ -109,6 +110,7 @@ body {
 }
 
 #team-slider.swiper::before {
+  @apply max-lg:hidden;
   content: "";
   left: 0;
   background: linear-gradient(
