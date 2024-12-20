@@ -11,9 +11,9 @@ $youtube_video_url = get_field("youtube_video_url");
 $next_post = get_next_post(true);
 $prev_post = get_previous_post(true);
 ?>
-<main class="pt-[50px]">
+<main class="lg:pt-[50px]">
     <div class="container">
-        <div class="flex gap-10 py-20">
+        <div class="flex max-lg:flex-col gap-10 py-20">
             <div class="w-full lg:w-3/4">
                 <iframe class="aspect-video" width="100%" height="auto" src="https://www.youtube.com/embed/ub8jj96_Q3g?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="py-6">
