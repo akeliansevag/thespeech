@@ -11,17 +11,36 @@ $youtube_video_url = get_field("youtube_video_url");
 $next_post = get_next_post(true);
 $prev_post = get_previous_post(true);
 ?>
+<main class="pt-[50px]">
+    <div class="container">
+        <div class="flex gap-10 py-20">
+            <div class="w-full lg:w-3/4">
+                <iframe class="aspect-video" width="100%" height="auto" src="https://www.youtube.com/embed/ub8jj96_Q3g?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="py-6">
+                    <div class="mb-2">
+                        <h1 class="section-title"><?= $post->post_title; ?></h1>
+                    </div>
+                    <div>
+                        <?php if ($post->post_content) : ?>
+                            <?= the_content(); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/4">
 
-<div class="main-container container mt-5" id="main-container">
+            </div>
+        </div>
 
-    <!-- Content -->
+
+    </div>
+</main>
+<!-- <div class="main-container container mt-5" id="main-container">
     <div class="row">
 
-        <!-- post content -->
         <div class="col-lg-8 blog__content mb-72">
             <div class="content-box">
 
-                <!-- standard post -->
                 <article class="entry mb-0">
 
                     <div class="single-post__entry-header entry__header">
@@ -43,21 +62,20 @@ $prev_post = get_previous_post(true);
 
                             <ul class="entry__meta">
                                 <li class="entry__meta-views">
-                                    <span>Reading time: <?= get_reading_time($post) ?></span>
+                                    <span>Reading time: 12</span>
                                 </li>
 
                             </ul>
                         </div>
-                    </div> <!-- end entry header -->
+                    </div>
 
                     <div class="entry__img-holder">
-                        <?= get_the_post_thumbnail($post->ID, 'large', ['class' => 'entry__img']); ?>
+                        <?= get_the_post_thumbnail($post->ID, 'banner-image', ['class' => 'entry__img']); ?>
                         <?= get_the_post_thumbnail_caption($post->ID); ?>
                     </div>
 
                     <div class="entry__article-wrap">
 
-                        <!-- Share -->
                         <div class="entry__share">
                             <div class="sticky-col">
                                 <?php $url = get_permalink(); ?>
@@ -83,7 +101,7 @@ $prev_post = get_previous_post(true);
 
                                 </div>
                             </div>
-                        </div> <!-- share -->
+                        </div>
 
                         <div class="entry__article">
                             <?php if ($post->post_content) : ?>
@@ -92,56 +110,47 @@ $prev_post = get_previous_post(true);
 
                             <?php $tags = wp_get_post_tags($post->ID); ?>
                             <?php if ($tags) : ?>
-                                <!-- tags -->
                                 <div class="entry__tags">
                                     <i class="ui-tags"></i>
                                     <span class="entry__tags-label">Tags:</span>
                                     <?php foreach ($tags as $tag) : ?>
                                         <a rel="tag" href="<?= get_tag_link($tag) ?>"><?= $tag->name; ?></a>
                                     <?php endforeach; ?>
-                                </div> <!-- end tags -->
+                                </div>
                             <?php endif; ?>
 
-                        </div> <!-- end entry article -->
-                    </div> <!-- end entry article wrap -->
+                        </div>
+                    </div>
 
 
-                    <!-- Prev / Next Post -->
+
                     <nav class="entry-navigation">
                         <div class="clearfix">
                             <div class="entry-navigation--left">
                                 <i class="ui-arrow-left"></i>
                                 <span class="entry-navigation__label">Previous Post</span>
                                 <div class="entry-navigation__link">
-                                    <a href="<?= get_permalink($prev_post->ID) ?>" rel="next"><?= print_title($prev_post) ?></a>
+                                    <a href="<?= get_permalink($prev_post->ID) ?>" rel="next"><?= $prev_post->post_title; ?></a>
                                 </div>
                             </div>
                             <div class="entry-navigation--right">
                                 <span class="entry-navigation__label">Next Post</span>
                                 <i class="ui-arrow-right"></i>
                                 <div class="entry-navigation__link">
-                                    <a href="<?= get_permalink($next_post->ID) ?>" rel="prev"><?= print_title($next_post) ?></a>
+                                    <a href="<?= get_permalink($next_post->ID) ?>" rel="prev"><?= $next_post->post_title; ?></a>
                                 </div>
                             </div>
                         </div>
                     </nav>
 
-                </article> <!-- end standard post -->
+                </article>
 
-            </div> <!-- end content box -->
-        </div> <!-- end post content -->
-
-        <!-- Sidebar -->
-        <aside class="col-lg-4 sidebar sidebar--right">
-            <div class="sticky">
-                <?= get_template_part("template-parts/sidebar/circle-posts", "", ['title' => 'Related Articles', 'posts' => $related]); ?>
-                <?= get_template_part("template-parts/sidebar/newsletter"); ?>
-                <?= get_template_part("template-parts/sidebar/social"); ?>
             </div>
+        </div>
 
-        </aside> <!-- end sidebar -->
 
-    </div> <!-- end content -->
-</div> <!-- end main container -->
+
+    </div>
+</div> -->
 
 <?php get_footer(); ?>
