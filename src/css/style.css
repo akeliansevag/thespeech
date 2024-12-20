@@ -264,3 +264,29 @@ body.open #side-menu-overlay {
 .mobile-menu li a {
   color: #54555e;
 }
+
+.page-numbers {
+  @apply border border-gray-300 inline-flex items-center justify-center;
+  font-size: 15px;
+  width: 30px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 2px;
+  text-align: center;
+  color: #171821;
+  background-color: #fff;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.page-numbers.current,
+a.page-numbers:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: transparent;
+}
+
+.page-numbers.current svg path,
+a.page-numbers:hover svg path {
+  @apply stroke-white;
+}
