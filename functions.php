@@ -1,7 +1,7 @@
 <?php
 if (! defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.0');
+	define('_S_VERSION', '1.0.1');
 }
 
 
@@ -47,16 +47,16 @@ add_action('after_setup_theme', 'thespeech_setup');
 function thespeech_scripts()
 {
 	// Get file paths
-	$css_file = get_template_directory() . '/build/output.css';
-	$js_file = get_template_directory() . '/assets/js/scripts.js'; // Get file paths
+	$css_file = get_template_directory_uri() . '/dist/css/output.css';
+	$js_file = get_template_directory_uri() . '/dist/js/bundle.js'; // Get file paths
 
 	// Dynamic versioning based on file modification time
 	$css_version = file_exists($css_file) ? filemtime($css_file) : _S_VERSION;
 	$js_version = file_exists($js_file) ? filemtime($js_file) : _S_VERSION;
 
 	// Enqueue styles and scripts with dynamic versions
-	wp_enqueue_style('thespeech-style', get_template_directory_uri() . "/dist/css/output.css", array(), $css_version);
-	wp_enqueue_script_module('thespeech-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array(), $js_version, true);
+	wp_enqueue_style('thespeech-style', $css_file, array(), $css_version);
+	wp_enqueue_script_module('thespeech-scripts', $js_file, array(), $js_version, true);
 
 
 

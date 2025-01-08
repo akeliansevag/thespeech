@@ -1,7 +1,6 @@
 <?php
 $category_name = isset($args['category_name']) ? $args['category_name'] : 'protalk';
 $category = get_category_by_slug($category_name); // Replace 'protalk' with your category slug.
-
 $args = array(
     'category_name' => $category_name, // Category slug
     'post_status'   => 'publish', // Only published posts
@@ -31,7 +30,7 @@ $posts = get_posts($args);
                     </div>
                 </div>
                 <div>
-                    <a href="">VIEW ALL</a>
+                    <a class="s-button" href="<?= get_category_link($category->term_id) ?>">VIEW ALL</a>
                 </div>
             </div>
 

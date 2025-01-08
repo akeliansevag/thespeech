@@ -77,10 +77,9 @@ body {
 .s-button {
   width: 100%;
   text-align: center;
-  background-color: #a60023;
   padding: 8px 18px;
-  color: white;
   text-transform: uppercase;
+  border-width: 1px;
 }
 #team-slider .swiper-slide {
   transition: transform 0.2s ease-out;
