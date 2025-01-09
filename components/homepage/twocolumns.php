@@ -13,7 +13,14 @@ $posts = get_posts($args);
 ?>
 <?php if ($posts): ?>
     <div>
-        <h2 class="section-title uppercase"><?= $category->name ?></h2>
+        <div class="flex justify-between items-center">
+            <h2 class="section-title uppercase"><?= $category->name ?></h2>
+            <div>
+                <a href="<?= get_term_link($category->term_id) ?>" class="s-button border-primary text-primary">View All</a>
+            </div>
+
+        </div>
+
         <div class="grid grid-cols-4 max-lg:grid-cols-1 gap-3 mt-4">
             <div class="col-span-2 xl:col-span-3">
                 <?php get_template_part("components/post/thumb-large", null, ['post' => $posts[0]]); ?>
