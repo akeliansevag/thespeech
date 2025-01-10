@@ -37,3 +37,4 @@ $posts = get_posts($args);
         </div>
     </div>
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>

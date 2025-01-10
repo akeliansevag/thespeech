@@ -47,3 +47,4 @@ $posts = get_posts($args);
         </div>
     </section>
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>
