@@ -27,7 +27,7 @@ $team = $query->posts;
                         <a href="<?= get_permalink($member->ID) ?>" class="s-button bg-primary border-primary">
                             Learn More
                         </a>
-                        <a href="<?= get_permalink($member->ID) ?>" class=" s-button text-white border-white">
+                        <a href="<?= get_permalink($member->ID) ?>" class="s-button text-white border-white">
                             Watch Video
                         </a>
                     </div>
@@ -40,3 +40,4 @@ $team = $query->posts;
     <div class="swiper-button-prev after:text-white"></div>
     <div class="swiper-button-next after:text-white"></div>
 </div>
+<?php wp_reset_postdata(); ?>

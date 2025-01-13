@@ -71,3 +71,39 @@ function dd($variable)
 	var_dump($variable);
 	echo '</pre>';
 }
+
+
+function generate_youtube_iframe($youtube_url)
+{
+	if (empty($youtube_url) || !is_string($youtube_url)) {
+		return '<p>No valid YouTube URL provided.</p>';
+	}
+
+	$video_id = null;
+
+	// Parse the URL to determine the format
+	$parsed_url = parse_url($youtube_url);
+
+	// Handle standard YouTube URLs (e.g., https://www.youtube.com/watch?v=VIDEO_ID)
+	if (isset($parsed_url['host']) && strpos($parsed_url['host'], 'youtube.com') !== false) {
+		parse_str($parsed_url['query'], $query_params);
+		$video_id = $query_params['v'] ?? null;
+	}
+
+	// Handle shortened YouTube URLs (e.g., https://youtu.be/VIDEO_ID)
+	if (isset($parsed_url['host']) && strpos($parsed_url['host'], 'youtu.be') !== false) {
+		$video_id = trim($parsed_url['path'], '/');
+	}
+
+	if ($video_id) {
+		// Generate the iframe
+		return '<iframe class="aspect-video" width="100%" height="auto" 
+            src="https://www.youtube.com/embed/' . esc_attr($video_id) . '?autoplay=1" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>';
+	} else {
+		return '<p>Invalid YouTube URL provided.</p>';
+	}
+}
