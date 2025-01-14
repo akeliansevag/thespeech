@@ -30,7 +30,7 @@ $posts = get_posts($args);
                     </div>
                 </div>
                 <div>
-                    <a class="s-button" href="<?= get_category_link($category->term_id) ?>">VIEW ALL</a>
+                    <a class="s-button" href="<?= get_category_link($category->term_id) ?>"><?php _e('View All', 'thespeech') ?></a>
                 </div>
             </div>
 

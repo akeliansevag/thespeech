@@ -8,7 +8,7 @@
             <h2 class="max-lg:text-base text-[20px] uppercase mb-5">
                 <?= get_field('banner_subtitle'); ?>
             </h2>
-            <a data-fancybox class="s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y">Watch Video</a>
+            <a data-fancybox class="s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a>
         </div>
     </div>
 </section>

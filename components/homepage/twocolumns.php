@@ -18,7 +18,7 @@ $posts = get_posts($args);
                 <div class="flex justify-between items-center">
                     <h2 class="section-title uppercase"><?= $category->name ?></h2>
                     <div>
-                        <a href="<?= get_term_link($category->term_id) ?>" class="s-button border-primary text-primary">View All</a>
+                        <a href="<?= get_term_link($category->term_id) ?>" class="s-button border-primary text-primary"><?php _e('View All', 'thespeech') ?></a>
                     </div>
 
                 </div>
