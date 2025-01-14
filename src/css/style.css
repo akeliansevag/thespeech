@@ -45,9 +45,9 @@ body {
 }
 
 .menu > li:not(:last-child)::after {
+  @apply ltr:right-0 rtl:left-0;
   content: "";
   position: absolute;
-  right: 0;
   top: -4px;
   width: 1px;
   height: 30px;

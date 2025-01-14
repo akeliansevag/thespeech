@@ -16,7 +16,7 @@ $posts = get_posts($args);
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-20">
                     <h2 class="section-title"><?= $category->name ?></h2>
-                    <div class="flex items-center gap-5">
+                    <div class="flex rtl:flex-row-reverse items-center gap-5">
                         <div class="thumb-prev">
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 12.7407L1 6.74072L7 0.740723" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

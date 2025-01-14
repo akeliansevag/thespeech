@@ -25,7 +25,7 @@ $posts = $query->posts;
     <section class="my-20">
         <div class="container">
             <h1 class="section-title uppercase">
-                Search results for: "<?= $q; ?>"
+                <?= _e("Search results for:", 'thespeech') ?> <?= $q; ?>
             </h1>
             <div class="bg-[#A60023] h-[4px] w-[50px]"></div>
             <?php if ($posts): ?>
@@ -50,7 +50,7 @@ $posts = $query->posts;
                 </nav>
             <?php else: ?>
                 <div class="mt-10">
-                    <h2>No posts to display.</h2>
+                    <h2><?= _e("No posts to display.", "thespeech"); ?></h2>
                 </div>
 
             <?php endif; ?>

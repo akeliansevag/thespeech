@@ -21,7 +21,7 @@ $posts = $query->posts;
     <section class="my-20">
         <div class="container">
             <h1 class="section-title uppercase">
-                The Team
+                <?= the_title(); ?>
             </h1>
             <div class="bg-[#A60023] h-[4px] w-[50px]"></div>
             <?php if ($posts): ?>
