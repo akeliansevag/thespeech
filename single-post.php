@@ -5,8 +5,8 @@ $cat = get_the_category($post->ID);
 $time = human_time_diff(get_the_time('U', $post->ID), current_time('timestamp'));
 $author = get_the_author_meta('display_name', $post->post_author);
 
-$related = get_posts(array('category__in' => wp_get_post_categories($post->ID), 'numberposts' => 4, 'post__not_in' => array($post->ID)));
-$youtube_video_url = get_field("youtube_video_url");
+//$related = get_posts(array('category__in' => wp_get_post_categories($post->ID), 'numberposts' => 4, 'post__not_in' => array($post->ID)));
+$youtube_link = get_field("post_youtube_url");
 
 $next_post = get_next_post(true);
 $prev_post = get_previous_post(true);
@@ -15,7 +15,9 @@ $prev_post = get_previous_post(true);
     <div class="container">
         <div class="flex max-lg:flex-col gap-10 py-20">
             <div class="w-full lg:w-3/4">
-                <iframe class="aspect-video" width="100%" height="auto" src="https://www.youtube.com/embed/ub8jj96_Q3g?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <?php if ($youtube_link): ?>
+                    <?= generate_youtube_iframe($youtube_link); ?>
+                <?php endif; ?>
                 <div class="py-6">
                     <div class="mb-2">
                         <h1 class="section-title"><?= $post->post_title; ?></h1>
