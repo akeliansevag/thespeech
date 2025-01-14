@@ -2,12 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+[lang="ar"] {
+  @apply font-arabic leading-10;
+  direction: rtl;
+}
+
 body {
   margin-top: 92px;
-  font-family: "Inter", sans-serif;
+  /*  */
+}
+
+.readex-pro {
+  font-family: "Readex Pro", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
+  font-variation-settings: "HEXP" 0;
 }
 
 .separator {

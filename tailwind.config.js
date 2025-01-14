@@ -10,6 +10,10 @@ module.exports = {
       colors: {
         primary : '#A60023'
       },
+      fontFamily: {
+        english: ['Inter', 'sans-serif'], // Replace with your English font
+        arabic: ['Readex Pro', 'serif'],       // Replace with your Arabic font
+      },
     },
   },
   plugins: [],
