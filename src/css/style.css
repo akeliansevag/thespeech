@@ -106,7 +106,7 @@ body {
 #team-slider .swiper-slide-prev {
   transform-origin: top right;
 }
-#team-slider.swiper::after,
+/* #team-slider.swiper::after,
 #team-slider.swiper::before {
   @apply max-lg:hidden;
   content: "";
@@ -137,7 +137,7 @@ body {
     rgba(0, 0, 0, 0) 57%,
     rgba(0, 0, 0, 1) 100%
   );
-}
+} */
 
 .calendar-container {
   @apply max-xl:min-h-[400px] xl:min-h-[450px];

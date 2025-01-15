@@ -50,7 +50,7 @@
 						</form>
 					</div>
 					<div class="max-lg:w-1/2 w-1/3 flex justify-end">
-						<div class="flex items-center max-lg:gap-3 gap-5">
+						<div class="flex items-center max-lg:gap-2 gap-5">
 							<div>
 								<!-- <a class="font-bold" href="">EN</a> <span> / </span> <a href="">AR</a> -->
 								<?= do_shortcode('[wpml_language_selector_widget]'); ?>
