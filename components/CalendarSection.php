@@ -19,7 +19,9 @@ $posts = get_posts($args);
                 <div class="flex flex-col gap-5">
                     <?php foreach ($posts as $post): ?>
                         <div>
-                            <h4 class="text-[#707778] text-sm"><?= get_the_date('F j, Y', $post->ID) ?></h4>
+                            <!-- <h4 class="text-[#707778] text-sm"><?= get_the_date('F j, Y', $post->ID) ?></h4> -->
+                            <h4 class="text-[#707778] text-sm">January 31, 2025</h4>
+
                             <a href="<?= get_permalink($post->ID) ?>">
                                 <h3><?= $post->post_title; ?></h3>
                             </a>
@@ -55,7 +57,7 @@ $posts = get_posts($args);
 
                 <div>
                     <div>
-                        <?php get_template_part("components/post/thumb-small", null, ['post' => $posts[0]]) ?>
+                        <?php get_template_part("components/post/thumb-small", null, ['hideMeta' => true, 'post' => $posts[0]]) ?>
                     </div>
                 </div>
             </div>

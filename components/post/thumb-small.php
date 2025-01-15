@@ -1,5 +1,6 @@
 <?php
 $post = $args['post'];
+$hideMeta = isset($args['hideMeta']) ? $args['hideMeta'] : false;
 ?>
 
 <?php if ($post): ?>
@@ -19,7 +20,13 @@ $post = $args['post'];
                 <h5 class="font-[14px]"><?php _e('PLAY VIDEO', 'thespeech') ?></h5>
             </a>
             <h4 class="max-lg:line-clamp-1 uppercase font-bold"><a href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a></h4>
-            <h5 class="text-sm">By <a href="<?= get_author_posts_url($post->post_author) ?>"><?= get_the_author_meta('display_name', $post->post_author); ?></a> - <?= get_the_date('F j, Y', $post->ID) ?> </h5>
+            <h5 class="text-sm">By
+                <a href="<?= get_author_posts_url($post->post_author) ?>">
+                    <?= get_the_author_meta('display_name', $post->post_author); ?></a>
+                <?php if (!$hideMeta): ?>
+                    - <?= get_the_date('F j, Y', $post->ID) ?>
+                <?php endif; ?>
+            </h5>
         </div>
     </div>
 <?php endif; ?>
