@@ -1,7 +1,8 @@
 <section class="relative flex items-center min-h-[calc(100vh-92px)] bg-black w-full">
     <a class="inline-block z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" data-fancybox href="https://youtu.be/4D8S-mNlc8Y">
-        <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 4.59863L18.6021 12L7.5 19.4014V4.59863ZM9 7.40141V16.5986L15.8979 12L9 7.40141Z" fill="#ffffff" />
+        <svg width="100" height="100" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="35" cy="35" r="34.5" stroke="#FFFFFF" />
+            <path d="M49.3174 34.6649L26.6469 47.7537L26.6469 21.5761L49.3174 34.6649Z" fill="#FFFFFF" />
         </svg>
     </a>
     <img class="absolute w-full h-full object-cover" src="<?= get_template_directory_uri() ?>/src/img/home-banner.webp" alt="The Speech banner">
