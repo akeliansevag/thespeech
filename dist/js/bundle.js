@@ -1562,6 +1562,7 @@ if(document.getElementById('team-slider')){
     centeredSlides: false,
     spaceBetween: 20,
     grabCursor: true,
+    autoplay: true,
     breakpoints: {
       1280: {
           slidesPerView:2.5,
