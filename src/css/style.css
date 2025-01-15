@@ -38,14 +38,14 @@ body {
 }
 
 .menu {
-  @apply text-white w-full flex justify-start gap-10;
+  @apply text-white w-full flex justify-start gap-14;
 }
 .menu > li {
   @apply relative text-center;
 }
 
 .menu > li:not(:last-child)::after {
-  @apply ltr:-right-5 rtl:-left-5;
+  @apply ltr:-right-7 rtl:-left-7;
   content: "";
   position: absolute;
   top: 50%;
