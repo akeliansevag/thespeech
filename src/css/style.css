@@ -201,11 +201,22 @@ body {
   cursor: pointer;
   color: white;
   margin: 0 auto;
+  position: relative;
 }
 
 .day:hover {
   background-color: #707778;
   color: #1f0000;
+}
+
+.event-day::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 5px;
+  height: 5px;
+  background-color: red; /* Dot color */
+  border-radius: 50%;
 }
 
 .year,
