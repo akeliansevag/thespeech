@@ -10,12 +10,16 @@
                     <path d="M49.3174 34.6649L26.6469 47.7537L26.6469 21.5761L49.3174 34.6649Z" fill="#FFFFFF" />
                 </svg>
             </a>
-            <h1 class="max-lg:text-5xl text-[80px] leading-[86px]">
-                <?= get_field('banner_title'); ?>
-            </h1>
-            <h2 class="max-lg:text-base text-[20px] uppercase mb-5">
-                <?= get_field('banner_subtitle'); ?>
-            </h2>
+            <?php if (get_field('banner_title')): ?>
+                <h1 class="max-lg:text-5xl text-[80px] leading-[86px] font-bold">
+                    <?= get_field('banner_title'); ?>
+                </h1>
+            <?php endif; ?>
+            <?php if (get_field('banner_subtitle')): ?>
+                <h2 class="max-lg:text-base text-[20px] uppercase mb-5">
+                    <?= get_field('banner_subtitle'); ?>
+                </h2>
+            <?php endif; ?>
 
             <!-- <a data-fancybox class="s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a> -->
 
