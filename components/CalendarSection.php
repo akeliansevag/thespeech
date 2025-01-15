@@ -20,7 +20,7 @@ $posts = get_posts($args);
                     <?php foreach ($posts as $post): ?>
                         <div>
                             <!-- <h4 class="text-[#707778] text-sm"><?= get_the_date('F j, Y', $post->ID) ?></h4> -->
-                            <h4 class="text-[#707778] text-sm">January 31, 2025</h4>
+                            <h4 class="text-[#707778] text-sm">January 21, 2025</h4>
 
                             <a href="<?= get_permalink($post->ID) ?>">
                                 <h3><?= $post->post_title; ?></h3>
