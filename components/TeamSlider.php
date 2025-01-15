@@ -9,7 +9,7 @@ $team = $query->posts;
     <div class="swiper-wrapper">
         <?php foreach ($team as $member): ?>
             <div class="swiper-slide">
-                <a href="<?= get_permalink($member->ID) ?>" class="s-button bg-primary border-primary">
+                <a href="<?= get_permalink($member->ID) ?>">
                     <?php $thumb_classes = 'absolute w-full h-full object-cover -z-10'; ?>
                     <?php if (has_post_thumbnail($member->ID)): ?>
                         <?= get_the_post_thumbnail($member->ID, 'large-thumbnail', ['class' => $thumb_classes]); ?>
