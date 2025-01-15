@@ -23,7 +23,7 @@ $showDescription = isset($args['showDescription']) ? $args['showDescription'] : 
             </a>
             <h4 class="max-lg:line-clamp-1 uppercase font-bold">
                 <a href="<?= get_permalink($post->ID) ?>">
-                    <?php if ($hideTitle): ?>
+                    <?php if (!$hideTitle): ?>
                         <?= $post->post_title ?>
                     <?php endif; ?>
 
