@@ -68,9 +68,9 @@
 							</div> -->
 
 
-							<span class="separator"> </span>
+							<span class="separator lg:hidden"> </span>
 
-							<div class="hamburger cursor-pointer" id="hamburger">
+							<div class="hamburger lg:hidden cursor-pointer" id="hamburger">
 								<span></span>
 								<span></span>
 								<span></span>

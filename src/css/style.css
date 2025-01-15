@@ -38,19 +38,20 @@ body {
 }
 
 .menu {
-  @apply text-white w-full flex justify-between;
+  @apply text-white w-full flex justify-start gap-10;
 }
 .menu > li {
-  @apply w-full relative text-center;
+  @apply relative text-center;
 }
 
 .menu > li:not(:last-child)::after {
-  @apply ltr:right-0 rtl:left-0;
+  @apply ltr:-right-5 rtl:-left-5;
   content: "";
   position: absolute;
-  top: -4px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 15px;
   background-color: #8c8c8c;
   display: block;
 }
