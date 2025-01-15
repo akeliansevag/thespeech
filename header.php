@@ -84,10 +84,13 @@
 		</div>
 
 		<div class="bg-[#000000] max-lg:hidden bg-opacity-40 h-[50px] w-full flex items-center backdrop-blur-[50px]">
-			<div class="w-full max-w-[1400px] mx-auto">
-				<?php
-				wp_nav_menu(['menu' => 'main-menu', 'menu_class' => 'uppercase menu text-sm font-[600]']);
-				?>
+			<div class="container">
+				<div class="w-full mx-auto">
+					<?php
+					wp_nav_menu(['menu' => 'main-menu', 'menu_class' => 'uppercase menu text-sm font-[600]']);
+					?>
+				</div>
 			</div>
+
 		</div>
 	</header>
