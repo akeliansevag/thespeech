@@ -23,7 +23,7 @@ $posts = get_posts($args);
                             <h4 class="text-[#707778] text-sm">January 21, 2025</h4>
 
                             <a href="<?= get_permalink($post->ID) ?>">
-                                <h3><?= $post->post_title; ?></h3>
+                                <h3><?= $post->content; ?></h3>
                             </a>
                             <div class="w-full h-[1px] bg-[#2C3636] mt-3"></div>
                         </div>
