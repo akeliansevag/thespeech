@@ -1,6 +1,8 @@
 <?php
 $post = $args['post'];
 $hideMeta = isset($args['hideMeta']) ? $args['hideMeta'] : false;
+$hideTitle = isset($args['hideTitle']) ? $args['hideTitle'] : false;
+$showDescription = isset($args['showDescription']) ? $args['showDescription'] : false;
 ?>
 
 <?php if ($post): ?>
@@ -19,7 +21,18 @@ $hideMeta = isset($args['hideMeta']) ? $args['hideMeta'] : false;
                 </svg>
                 <h5 class="font-[14px]"><?php _e('PLAY VIDEO', 'thespeech') ?></h5>
             </a>
-            <h4 class="max-lg:line-clamp-1 uppercase font-bold"><a href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a></h4>
+            <h4 class="max-lg:line-clamp-1 uppercase font-bold">
+                <a href="<?= get_permalink($post->ID) ?>">
+                    <?php if ($hideTitle): ?>
+                        <?= $post->post_title ?>
+                    <?php endif; ?>
+
+                    <?php if ($showDescription): ?>
+                        <?= $post->post_content; ?>
+                    <?php endif; ?>
+
+                </a>
+            </h4>
             <h5 class="text-sm">By
                 <a href="<?= get_author_posts_url($post->post_author) ?>">
                     <?= get_the_author_meta('display_name', $post->post_author); ?></a>

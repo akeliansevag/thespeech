@@ -56,7 +56,7 @@ $posts = get_posts($args);
 
                 <div>
                     <div>
-                        <?php get_template_part("components/post/thumb-small", null, ['hideMeta' => true, 'post' => $posts[0]]) ?>
+                        <?php get_template_part("components/post/thumb-small", null, ['showDescription' => true, 'hideTitle' => true, 'hideMeta' => true, 'post' => $posts[0]]) ?>
                     </div>
                 </div>
             </div>
