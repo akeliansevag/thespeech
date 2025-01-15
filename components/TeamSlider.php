@@ -16,15 +16,14 @@ $team = $query->posts;
                     <?php else: ?>
                         <img src="<?= get_template_directory_uri() ?>/src/img/placeholder-person.webp" alt="Image Placeholder" class="<?= $thumb_classes ?>">
                     <?php endif; ?>
-                    <div class="flex flex-col justify-between relative w-full aspect-square overlay p-10">
-                        <div></div>
+                    <div class="flex flex-col justify-center relative w-full aspect-square overlay p-10">
                         <div class="flex flex-col justify-center items-center gap-4 text-center relative z-10">
                             <?php get_template_part("components/assets/play-button"); ?>
                             <h3 class="uppercase mt-4 text-xl font-[700]"><?= $member->post_title ?></h3>
                             <h4 class="text-xl"><?= get_field('title', $member->ID) ?></h4>
                             <h5><?= get_field('degree', $member->ID) ?></h5>
                         </div>
-                        <div class="max-w-[350px] mt-3 w-full mx-auto max-lg:flex-col flex justify-between items-center gap-6 relative z-10">
+                        <div class="max-w-[350px] mt-10 w-full mx-auto max-lg:flex-col flex justify-between items-center gap-6 relative z-10">
                             <a href="<?= get_permalink($member->ID) ?>" class="s-button bg-primary border-primary">
                                 <?php _e('Play Video', 'thespeech') ?>
                             </a>
