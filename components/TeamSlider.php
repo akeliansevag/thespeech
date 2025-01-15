@@ -23,7 +23,7 @@ $team = $query->posts;
                         <h4 class="text-xl"><?= get_field('title', $member->ID) ?></h4>
                         <h5><?= get_field('degree', $member->ID) ?></h5>
                     </div>
-                    <div class="max-lg:flex-col flex justify-between items-center gap-6 relative z-10">
+                    <div class="max-w-[350px] mt-3 w-full mx-auto max-lg:flex-col flex justify-between items-center gap-6 relative z-10">
                         <a href="<?= get_permalink($member->ID) ?>" class="s-button bg-primary border-primary">
                             <?php _e('Play Video', 'thespeech') ?>
                         </a>
