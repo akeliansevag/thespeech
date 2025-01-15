@@ -9,7 +9,6 @@ $args = array(
 );
 
 $posts = get_posts($args);
-dd($posts);
 ?>
 <?php if ($posts): ?>
     <section class="bg-[#021112] py-12 text-white">
