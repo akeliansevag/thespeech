@@ -27,7 +27,7 @@ $posts = $query->posts;
             <?php if ($posts): ?>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-8">
                     <?php foreach ($posts as $post): ?>
-                        <?php get_template_part("components/article-card", "", ['post' => $post]); ?>
+                        <?php get_template_part("components/teamCard", "", ['post' => $post]); ?>
                     <?php endforeach; ?>
                 </div>
                 <nav class="pagination text-center my-10">
