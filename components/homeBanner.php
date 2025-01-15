@@ -9,12 +9,12 @@
     <div class="container">
 
         <div class="text-white relative lg:w-1/3">
-            <!-- <h1 class="max-lg:text-5xl text-[80px] leading-none">
+            <h1 class="max-lg:text-5xl text-[80px] leading-none">
                 <?= get_field('banner_title'); ?>
             </h1>
             <h2 class="max-lg:text-base text-[20px] uppercase mb-5">
                 <?= get_field('banner_subtitle'); ?>
-            </h2> -->
+            </h2>
 
             <!-- <a data-fancybox class="s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a> -->
 
