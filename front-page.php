@@ -15,7 +15,7 @@
     </div>
 </section> -->
 <?php get_template_part('components/FullPostsSlider', null, ['category_name' => 'stories']); ?>
-<?php get_template_part("components/homepage/twocolumns", null, ['category_name' => 'protalk']); ?>
+<?php get_template_part("components/homepage/twocolumns", null, ['category_name' => 'news']); ?>
 
 <section class="bg-black py-12 text-white">
     <div class="container">
