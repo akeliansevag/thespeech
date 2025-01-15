@@ -9,7 +9,7 @@
     <div class="container">
 
         <div class="text-white relative lg:w-1/3 max-lg:text-center">
-            <h1 class="max-lg:text-5xl text-[80px] leading-none">
+            <h1 class="max-lg:text-5xl text-[80px] leading-[86px]">
                 <?= get_field('banner_title'); ?>
             </h1>
             <h2 class="max-lg:text-base text-[20px] uppercase mb-5">
