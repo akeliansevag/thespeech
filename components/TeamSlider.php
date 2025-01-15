@@ -25,7 +25,7 @@ $team = $query->posts;
                     </div>
                     <div class="max-lg:flex-col flex justify-between items-center gap-6 relative z-10">
                         <a href="<?= get_permalink($member->ID) ?>" class="s-button bg-primary border-primary">
-                            <?php _e('Learn More', 'thespeech') ?>
+                            <?php _e('Play Video', 'thespeech') ?>
                         </a>
                         <!-- <a href="<?= get_permalink($member->ID) ?>" class="s-button text-white border-white">
                             Watch Video
