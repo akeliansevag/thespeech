@@ -3,7 +3,7 @@
     <img class="image-wrap absolute w-full h-full object-cover" src="<?= get_template_directory_uri() ?>/src/img/microphone.webp" alt="The Speech banner">
     <div class="container">
 
-        <div class="text-white relative max-w-[500px]">
+        <div class="text-white relative max-w-[500px] ltr:text-left rtl:text-right">
             <!-- <a class="inline-block mb-3 z-10 relative" data-fancybox href="https://youtu.be/4D8S-mNlc8Y">
                 <svg width="100" height="100" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="35" cy="35" r="34.5" stroke="#FFFFFF" />
@@ -11,7 +11,7 @@
                 </svg>
             </a> -->
             <?php if (get_field('banner_title')): ?>
-                <h1 class="ltr:text-left rtl:text-right max-lg:text-5xl text-[80px] leading-[86px]  mb-5 font-[700]">
+                <h1 class=" max-lg:text-5xl text-[80px] leading-[86px]  mb-5 font-[700]">
                     <?= get_field('banner_title'); ?>
                 </h1>
             <?php endif; ?>
