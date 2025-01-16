@@ -11,7 +11,7 @@
                 </svg>
             </a> -->
             <?php if (get_field('banner_title')): ?>
-                <h1 class="max-lg:text-5xl text-[80px] leading-[86px] font-[700]">
+                <h1 class="max-lg:text-5xl text-[80px] leading-[86px]  mb-5 font-[700]">
                     <?= get_field('banner_title'); ?>
                 </h1>
             <?php endif; ?>
@@ -21,7 +21,7 @@
                 </h2>
             <?php endif; ?>
 
-            <a data-fancybox class="mt-4 s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a>
+            <a data-fancybox class="s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a>
 
         </div>
     </div>
