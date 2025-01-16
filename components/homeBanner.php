@@ -11,7 +11,7 @@
                 </svg>
             </a> -->
             <?php if (get_field('banner_title')): ?>
-                <h1 class="rtl:text-left ltr:text-right max-lg:text-5xl text-[80px] leading-[86px]  mb-5 font-[700]">
+                <h1 class="ltr:text-left rtl:text-right max-lg:text-5xl text-[80px] leading-[86px]  mb-5 font-[700]">
                     <?= get_field('banner_title'); ?>
                 </h1>
             <?php endif; ?>
