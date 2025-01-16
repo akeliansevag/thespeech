@@ -92,21 +92,7 @@ body {
   text-transform: uppercase;
   border-width: 1px;
 }
-#team-slider .swiper-slide {
-  transition: transform 0.2s ease-out;
-}
-#team-slider .swiper-slide-prev,
-#team-slider .swiper-slide-next {
-  transform: scale(0.8) !important;
-}
-
-#team-slider .swiper-slide-next {
-  transform-origin: top left;
-}
-
-#team-slider .swiper-slide-prev {
-  transform-origin: top right;
-}
+/*  */
 /* #team-slider.swiper::after,
 #team-slider.swiper::before {
   @apply max-lg:hidden;

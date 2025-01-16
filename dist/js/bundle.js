@@ -1565,16 +1565,16 @@ if(document.getElementById('team-slider')){
     autoplay: true,
     breakpoints: {
       1280: {
-          slidesPerView:2.5,
-          centeredSlides:true
+          slidesPerView:3,
+          //centeredSlides:true
       },
       992: {
           slidesPerView:2,
-          centeredSlides:true
+          //centeredSlides:true
       },
       768: {
         slidesPerView:1.5,
-        centeredSlides:true
+        //centeredSlides:true
       }
     },
     // Navigation arrows

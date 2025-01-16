@@ -19,7 +19,7 @@
 
 <section class="bg-black py-12 text-white">
     <div class="container">
-        <div class="text-center max-w-[900px] mx-auto">
+        <div class="max-w-[900px]">
             <h2 class="section-title mt-4"><?= get_field('about_title') ?></h2>
             <div class="py-8">
                 <h2 class="text-xl uppercase mb-4"><?= get_field('about_subtitle') ?></h2>
