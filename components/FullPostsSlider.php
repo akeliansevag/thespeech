@@ -37,14 +37,12 @@ $posts = get_posts($args);
 
         </div>
         <div id="full-posts-slider" class="swiper mt-8">
-            <div class="container">
-                <div class="swiper-wrapper">
-                    <?php foreach ($posts as $post): ?>
-                        <div class="swiper-slide">
-                            <?php get_template_part('components/post/thumb', null, ['post' => $post]); ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+            <div class="swiper-wrapper">
+                <?php foreach ($posts as $post): ?>
+                    <div class="swiper-slide">
+                        <?php get_template_part('components/post/thumb', null, ['post' => $post]); ?>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
