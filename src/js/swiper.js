@@ -37,21 +37,18 @@ if(document.getElementById('full-posts-slider')){
   const fullPostsSlider  = new Swiper('#full-posts-slider', {
     loop: true,
     slidesPerView: 1.2,
-    centeredSlides: false,
     spaceBetween: 20,
     autoplay: true,
     breakpoints: {
       1500: {
         slidesPerView:5.5,
-        centeredSlides:true
+       
       },
       1280: {
           slidesPerView:4.5,
-          centeredSlides:true
       },
       992: {
           slidesPerView:3.5,
-          centeredSlides:false
       }
     },
     // Navigation arrows
