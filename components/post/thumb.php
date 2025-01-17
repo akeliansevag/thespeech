@@ -4,7 +4,7 @@ $post = $args['post'];
 
 <?php if ($post): ?>
     <?php $thumb_classes = 'absolute w-full h-full object-cover'; ?>
-    <div class=" w-full aspect-video h-full overflow-hidden relative overlay">
+    <div class="w-full max-w-[400px] aspect-video h-full overflow-hidden relative overlay">
         <?php if (has_post_thumbnail($post->ID)): ?>
             <?= get_the_post_thumbnail($post->ID, 'small-thumbnail', ['class' => $thumb_classes]); ?>
         <?php else: ?>
