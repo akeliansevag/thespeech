@@ -21,7 +21,10 @@
                 </h2>
             <?php endif; ?>
 
-            <a data-fancybox class="s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a>
+            <div class="mt-4">
+                <a data-fancybox class="mt-10 s-button border-primary bg-primary" href="https://youtu.be/4D8S-mNlc8Y"><?php _e('Watch Video', 'thespeech'); ?></a>
+            </div>
+
 
         </div>
     </div>
