@@ -34,7 +34,7 @@ $query = new WP_Query($args);
 $posts = $query->posts;
 ?>
 <main class="max-lg:pt-[25px] lg:pt-[50px]">
-    <section>
+    <section class="lg:my-20">
         <div class="container">
             <h1 class="section-title uppercase">
                 <?= $title; ?>
