@@ -3,7 +3,7 @@
     <img class="image-wrap absolute w-full h-full object-cover" src="<?= get_template_directory_uri() ?>/src/img/microphone.webp" alt="The Speech banner">
     <div class="container">
 
-        <div class="text-white relative max-w-[500px] flex flex-col gap-5 ltr:text-left rtl:text-right">
+        <div class="text-white relative max-w-[500px] flex flex-col gap-8 ltr:text-left rtl:text-right">
             <?php if (get_field('banner_title')): ?>
                 <h1 class=" max-lg:text-5xl text-[80px] leading-[86px] font-[700]">
                     <?= get_field('banner_title'); ?>
