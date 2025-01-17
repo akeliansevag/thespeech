@@ -33,7 +33,7 @@ if (isset($author) && !empty($author)) {
 $query = new WP_Query($args);
 $posts = $query->posts;
 ?>
-<main class="pt-[50px]">
+<main class="max-lg:pt-[25px] lg:pt-[50px]">
     <section>
         <div class="container">
             <h1 class="section-title uppercase">
