@@ -6,7 +6,7 @@ $post = $args['post'];
     <?php $thumb_classes = 'absolute w-full h-full object-cover'; ?>
     <div class=" w-full aspect-video h-full overflow-hidden relative overlay">
         <?php if (has_post_thumbnail($post->ID)): ?>
-            <?= get_the_post_thumbnail($post->ID, 'large-thumbnail', ['class' => $thumb_classes]); ?>
+            <?= get_the_post_thumbnail($post->ID, 'small-thumbnail', ['class' => $thumb_classes]); ?>
         <?php else: ?>
             <img src="<?= get_template_directory_uri() ?>/src/img/placeholder.webp" alt="Image Placeholder" class="<?= $thumb_classes ?>">
         <?php endif; ?>
