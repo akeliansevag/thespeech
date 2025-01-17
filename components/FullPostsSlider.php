@@ -38,7 +38,7 @@ $posts = get_posts($args);
         </div>
         <div class="container">
             <div id="full-posts-slider" class="swiper mt-8">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper flex">
                     <?php foreach ($posts as $post): ?>
                         <div class="swiper-slide">
                             <?php get_template_part('components/post/thumb', null, ['post' => $post]); ?>
