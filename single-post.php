@@ -30,11 +30,13 @@ $posts = $query->posts;
                             </div>
                         </div>
 
-                        <h5 class="text-sm uppercase font-bold text-[#83858F] mt-3"><?= _e('By', 'thespeech') ?>
+                        <h5 class="text-sm uppercase font-bold text-[#83858F] mt-3">
+                            <!-- <?= _e('By', 'thespeech') ?>
                             <a class="text-primary" href="<?= get_author_posts_url($post->post_author) ?>">
                                 <?= get_the_author_meta('display_name', $post->post_author); ?>
                             </a>
-                            - <?= get_the_date('F j, Y', $post->ID) ?>
+                            -  -->
+                            <?= get_the_date('F j, Y', $post->ID) ?>
                         </h5>
                     </div>
 
