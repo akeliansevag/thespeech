@@ -6,6 +6,10 @@ $author = get_the_author_meta('display_name', $post->post_author);
 
 $related = get_posts(array('category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID)));
 $youtube_link = get_field("post_youtube_url");
+$query = new WP_Query([
+    'posts_per_page' => 6
+]);
+$posts = $query->posts;
 ?>
 <main class="lg:pt-[50px]">
     <div class="container">
@@ -47,7 +51,13 @@ $youtube_link = get_field("post_youtube_url");
                 </div>
             </div>
             <div class="w-full lg:w-1/4">
-                <?= get_template_part('components/sidebar', null, ['title' => 'Related Posts', 'posts' => $related]); ?>
+                <?php if ($related): ?>
+                    <?= get_template_part('components/sidebar', null, ['title' => 'Related Posts', 'posts' => $related]); ?>
+                <?php else: ?>
+                    <?= get_template_part('components/sidebar', null, ['title' => 'Latest Posts', 'posts' => $posts]); ?>
+                <?php endif; ?>
+
+
             </div>
         </div>
     </div>
