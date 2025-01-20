@@ -1,4 +1,4 @@
-<section class="overflow-hidden relative flex max-lg:flex-col max-lg:justify-center items-center min-h-[calc(100vh-86px)] bg-black w-full">
+<section class="overflow-hidden relative flex max-lg:flex-col max-lg:justify-center items-center max-lg:min-h-[calc(100vh-var(--mobile-header-height))] lg:min-h-[calc(100vh-var(--header-height))] bg-black w-full">
 
     <img class="image-wrap absolute w-full h-full object-cover" src="<?= get_template_directory_uri() ?>/src/img/microphone.webp" alt="The Speech banner">
     <div class="container">

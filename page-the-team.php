@@ -18,7 +18,7 @@ $posts = $query->posts;
 ?>
 
 <main>
-    <section class="max-lg:py-10 lg:py-20">
+    <section>
         <div class="container">
             <h1 class="section-title uppercase">
                 <?= the_title(); ?>

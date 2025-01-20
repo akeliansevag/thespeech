@@ -7,9 +7,17 @@
   direction: rtl;
 }
 
+:root {
+  --header-height: 130px;
+  --mobile-header-height: 86px;
+}
+
 body {
-  @apply bg-[#f7f7f7];
-  margin-top: 86px;
+  @apply bg-[#f7f7f7] max-lg:mt-[var(--mobile-header-height)] lg:mt-[var(--header-height)];
+}
+
+main {
+  @apply lg:py-20 max-lg:py-10;
 }
 
 .readex-pro {

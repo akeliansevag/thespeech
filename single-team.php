@@ -9,9 +9,9 @@ $query = new WP_Query([
 ]);
 $posts = $query->posts;
 ?>
-<main class="lg:pt-[50px]">
+<main>
     <div class="container">
-        <div class="flex max-lg:flex-col gap-10 py-20">
+        <div class="flex max-lg:flex-col gap-10">
             <div class="w-full lg:w-3/4 ">
                 <div class="section-wrapper-full">
                     <?php if ($youtube_link): ?>
