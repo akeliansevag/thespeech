@@ -17,8 +17,8 @@ $query = new WP_Query([
 $posts = $query->posts;
 ?>
 
-<main class="pt-[50px]">
-    <section class="my-20">
+<main>
+    <section class="max-lg:py-10 lg:py-20">
         <div class="container">
             <h1 class="section-title uppercase">
                 <?= the_title(); ?>

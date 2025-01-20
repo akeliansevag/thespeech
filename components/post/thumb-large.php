@@ -20,7 +20,11 @@ $post = $args['post'];
             </a>
             <h4 class="max-lg:line-clamp-1 uppercase font-bold max-lg:text-base text-2xl"><a href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a></h4>
             <p class="max-lg:hidden"><?= $post->post_excerpt ?></p>
-            <h5 class="text-sm"><?= _e('By', 'thespeech') ?> <a href="<?= get_author_posts_url($post->post_author) ?>"><?= get_the_author_meta('display_name', $post->post_author); ?></a> - <?= get_the_date('F j, Y', $post->ID) ?> </h5>
+            <h5 class="text-sm">
+                <!-- <?= _e('By', 'thespeech') ?> <a href="<?= get_author_posts_url($post->post_author) ?>"><?= get_the_author_meta('display_name', $post->post_author); ?></a> -  -->
+
+                <?= get_the_date('F j, Y', $post->ID) ?>
+            </h5>
         </div>
     </div>
 <?php endif; ?>

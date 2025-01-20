@@ -33,12 +33,14 @@ $showDescription = isset($args['showDescription']) ? $args['showDescription'] : 
 
                 </a>
             </h4>
-            <h5 class="text-sm"><?= _e('By', 'thespeech') ?>
+            <h5 class="text-sm">
+                <!-- <?= _e('By', 'thespeech') ?>
                 <a href="<?= get_author_posts_url($post->post_author) ?>">
                     <?= get_the_author_meta('display_name', $post->post_author); ?></a>
                 <?php if (!$hideMeta): ?>
-                    - <?= get_the_date('F j, Y', $post->ID) ?>
-                <?php endif; ?>
+                    - -->
+                <?= get_the_date('F j, Y', $post->ID) ?>
+            <?php endif; ?>
             </h5>
         </div>
     </div>

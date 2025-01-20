@@ -346,5 +346,12 @@ a.page-numbers:hover svg path {
 }
 
 .section-wrapper {
-  @apply bg-white p-10 shadow-md;
+  @apply bg-white max-lg:p-5 lg:p-10 shadow-md;
+}
+.section-wrapper-full {
+  @apply bg-white max-lg:p-0 lg:pt-10 shadow-md lg:px-10;
+}
+
+.social-media-icons a:hover path {
+  @apply fill-primary;
 }

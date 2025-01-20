@@ -13,12 +13,15 @@ $posts = $query->posts;
 ?>
 <main class="lg:pt-[50px]">
     <div class="container">
-        <div class="flex max-lg:flex-col gap-10 py-20">
-            <div class="w-full lg:w-3/4 section-wrapper">
-                <?php if ($youtube_link): ?>
-                    <?= generate_youtube_iframe($youtube_link); ?>
-                <?php endif; ?>
-                <div class="py-6">
+        <div class="flex max-lg:flex-col gap-10 max-lg:py-10 lg:py-20">
+            <div class="w-full lg:w-3/4">
+                <div class="section-wrapper-full">
+                    <?php if ($youtube_link): ?>
+                        <?= generate_youtube_iframe($youtube_link); ?>
+                    <?php endif; ?>
+                </div>
+
+                <div class="section-wrapper !pt-5">
                     <div class="mb-2">
                         <div class="lg:flex lg:items-center lg:justify-between">
                             <h1 class="text-4xl"><?= $post->post_title; ?></h1>
@@ -49,6 +52,7 @@ $posts = $query->posts;
                         <?php endif; ?>
                     </div>
                 </div>
+
             </div>
             <div class="w-full lg:w-1/4">
                 <?php if ($related): ?>
@@ -56,8 +60,6 @@ $posts = $query->posts;
                 <?php else: ?>
                     <?= get_template_part('components/sidebar', null, ['title' => 'Latest Posts', 'posts' => $posts]); ?>
                 <?php endif; ?>
-
-
             </div>
         </div>
     </div>
