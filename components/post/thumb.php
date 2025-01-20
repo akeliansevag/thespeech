@@ -19,7 +19,7 @@ $post = $args['post'];
                     </svg>
                 </a>
                 <h4 class="uppercase font-bold text-sm one-line"><a href="<?= get_permalink($post->ID) ?>"><?= $post->post_title ?></a></h4>
-                <h5 class="text-sm">By <a href="<?= get_author_posts_url($post->post_author) ?>"><?= get_the_author_meta('display_name', $post->post_author); ?></a> - <?= get_the_date('M j, Y', $post->ID) ?> </h5>
+                <h5 class="text-sm"><?= _e('By', 'thespeech') ?> <a href="<?= get_author_posts_url($post->post_author) ?>"><?= get_the_author_meta('display_name', $post->post_author); ?></a> - <?= get_the_date('M j, Y', $post->ID) ?> </h5>
             </div>
         </div>
 

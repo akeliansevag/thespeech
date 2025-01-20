@@ -4,33 +4,37 @@ $member = get_post();
 $youtube_link = get_field('youtube_link');
 $title = get_field('title');
 $degree = get_field('degree');
+$query = new WP_Query([
+    'posts_per_page' => 6
+]);
+$posts = $query->posts;
 ?>
 <main class="lg:pt-[50px]">
     <div class="container">
-        <div class="flex max-lg:flex-col gap-10 pt-5 pb-20">
-            <div class="w-full lg:w-3/4">
+        <div class="flex max-lg:flex-col gap-10 py-20">
+            <div class="w-full lg:w-3/4 section-wrapper">
+                <?php if ($youtube_link): ?>
+                    <?= generate_youtube_iframe($youtube_link); ?>
+                <?php endif; ?>
                 <div class="py-6">
-                    <div>
-                        <?php if ($youtube_link): ?>
-                            <?= generate_youtube_iframe($youtube_link); ?>
+                    <div class="mb-2">
+                        <div class="lg:flex lg:items-center lg:justify-between">
+                            <h1 class="text-4xl"><?= $member->post_title; ?></h1>
+                            <div class="max-lg:my-2">
+                                <?= get_template_part('components/socialShare'); ?>
+                            </div>
+                        </div>
+                        <?php if ($title): ?>
+                            <h5 class="text-md uppercase font-bold text-primary mt-3"><?= $title; ?></h5>
+                        <?php endif; ?>
+                        <?php if ($degree): ?>
+                            <h5 class="text-sm uppercase font-bold mt-3"><?= $degree; ?></h5>
                         <?php endif; ?>
                     </div>
-                    <div class="my-5">
-                        <div class="mb-2">
-                            <h1 class="section-title"><?= $member->post_title; ?></h1>
-                            <?php if ($title): ?>
-                                <h2><?= $title ?></h2>
-                            <?php endif; ?>
-                            <?php if ($degree): ?>
-                                <h3><?= $degree ?></h3>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <div class="w-full lg:w-1/4">
-
+                <?= get_template_part('components/sidebar', null, ['title' => 'Latest Posts', 'posts' => $posts]); ?>
             </div>
         </div>
     </div>

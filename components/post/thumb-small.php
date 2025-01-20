@@ -33,7 +33,7 @@ $showDescription = isset($args['showDescription']) ? $args['showDescription'] : 
 
                 </a>
             </h4>
-            <h5 class="text-sm">By
+            <h5 class="text-sm"><?= _e('By', 'thespeech') ?>
                 <a href="<?= get_author_posts_url($post->post_author) ?>">
                     <?= get_the_author_meta('display_name', $post->post_author); ?></a>
                 <?php if (!$hideMeta): ?>
