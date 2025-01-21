@@ -100,7 +100,7 @@ function generate_youtube_iframe($youtube_url)
 		return '<iframe class="aspect-video" width="100%" height="auto" 
             src="https://www.youtube.com/embed/' . esc_attr($video_id) . '?autoplay=1" 
             title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>';
 	} else {
