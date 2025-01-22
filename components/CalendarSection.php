@@ -21,7 +21,7 @@ $posts = get_posts($args);
                             <h4 class="text-[#707778] text-sm"><?= get_the_date('F j, Y', $post->ID) ?></h4>
 
                             <a href="<?= get_permalink($post->ID) ?>">
-                                <h3><?= $post->post_content; ?></h3>
+                                <h3><?= $post->post_title; ?></h3>
                             </a>
                             <div class="w-full h-[1px] bg-[#2C3636] mt-3"></div>
                         </div>
@@ -55,7 +55,7 @@ $posts = get_posts($args);
 
                 <div>
                     <div>
-                        <?php get_template_part("components/post/thumb-small", null, ['showDescription' => true, 'hideTitle' => true, 'hideMeta' => true, 'post' => $posts[0]]) ?>
+                        <?php get_template_part("components/post/thumb-small", null, ['post' => $posts[0]]) ?>
                     </div>
                 </div>
             </div>
